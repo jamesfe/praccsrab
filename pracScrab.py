@@ -1,5 +1,46 @@
+'''
+    Practical Scrabble Class
+    By jamesfe
+    Created May 2014
+    CHANGELOG
+        May 2014    - Created
+        22 May 2014 - Documentation & Github, classy-fication
+'''
+
 import copy
 import operator
+
+class pracScrabble:
+    def __init__(self, tiledistro, wordfile):
+        ''' 
+            Given a dict with tile distribution and a path to a word file, create a scrabble object.
+        '''
+        self.tileDistro = tiledistro
+        self.wordFile = wordfile
+        self.wordList = [a.strip().upper() for a in file.read(file(self.wordFile), 'r').split("\n")]
+
+    def retQualifyingWords(self):
+        '''
+            Returns qualifying words, given the number of blank tiles?
+            TODO: THIS FUNCTION
+            TODO: Figure out what the deal with blank tiles is
+        '''
+        pass
+        return(-1)
+
+class pracWord:
+    def __init__(self, inWord):
+        '''
+            Boilerplate constructor - self.inWord = inWord
+        '''    
+        self.inWord = inWord
+    def getProbability(self, inDistTiles):
+        '''
+            Returns probability given the tiles present
+            TODO: THIS FUNCTION
+        '''
+        pass
+        return(-1)
 
 def distroPoss(inStr, inDistTiles, blankTiles=2):
     '''Returns true/false if string is possible given distribution'''
